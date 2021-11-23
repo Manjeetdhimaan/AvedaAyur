@@ -1,0 +1,78 @@
+<!-- <div class="owl-item active" style="width: 227px; margin-right: 20px;"> -->
+<!-- <div class="product product-11 text-center"> -->
+<div [ngClass]="setClass" *ngIf="layout=='grid'">
+    <figure class="product-media">
+        <span *ngIf="data.label || getStockStatus(data.stockStatus)" [class]="getLabelColor(data.label,data)">{{data.label}} </span>
+        <a (click)="onAddToProductDetail(data)" (click)="goToProductDetailComponent()">
+            <img [src]="imagesrc" alt="Product image" class="product-image">
+            <img *ngIf="data.imageSrc.length>1" [src]='data.imageSrc[1]' alt="Product image" class="product-image-hover"></a>
+        <div class="product-action-vertical"><a (click)="onAddItemToWishList(data)" class="btn-product-icon btn-wishlist"><span>add to
+            wishlist</span></a></div>
+    </figure>
+    <div class="product-body">
+        <h3 class="product-title"><a>{{ data.subCategory }}</a></h3>
+        <div class="product-price"> {{ data.price | currency}} </div>
+    </div>
+    <div class="product-action">
+        <button class="btn-product btn-cart" (click)="onAddtoCart(data)" [disabled]="getStockStatus(data.stockStatus)" [title]="getTitle(data.stockStatus)"><span>add to
+          cart</span></button>
+    </div>
+</div>
+<!-- </div> -->
+
+
+<!-- 
+<div [ngClass]="setClass" *ngIf="layout=='grid'">
+    <figure class="product-media">
+        <span *ngIf="data.label || getStockStatus(data.stockStatus)" [class]="getLabelColor(data.label,data)">{{data.label}}
+    </span>
+        <a (click)="onAddToProductDetail(data)" (click)="goToProductDetailComponent()">
+            <img [src]="imagesrc" alt="Product image" class="product-image">
+            <img *ngIf="data.imageSrc.length>1" [src]='data.imageSrc[1]' alt="Product image" class="product-image-hover">
+        </a>
+
+        <div class="product-action-vertical">
+            <a class="btn-product-icon btn-wishlist btn-expandable" (click)="onAddItemToWishList(data)"><span>add to
+          wishlist</span></a>
+            <a class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
+            <a class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
+        </div>
+
+        <div class="product-action" *ngIf="data.stockStatus !== 'out of stock'">
+            <a class="btn-product btn-cart" (click)="onAddtoCart(data)"><span>add to cart</span></a>
+        </div>
+    </figure>
+
+    <div class="product-body">
+        <div class="product-cat">
+
+            <a>{{data.category }}</a>
+        </div>
+        <h3 class="product-title"><a>{{ data.subCategory }}</a></h3>
+        <div class="product-price">
+            <span *ngIf="!getLabel(data.label) ">{{ data.price | currency}}</span>
+            <span *ngIf="getLabel(data.label)" class="new-price">Now {{ data.price | currency}}</span>
+            <span *ngIf="getLabel(data.label)" class="old-price">Was {{ data.oldPrice | currency}}</span>
+        </div>
+
+        <div class="product-nav product-nav-dots" *ngIf="data.color && showColor">
+            <a *ngFor="let color of data.color;let index=index" class="" [style]='getColor(data,index)'>
+                <span class="sr-only">Color name: </span>
+
+            </a>
+
+        </div>
+        <div class="ratings-container" style="margin-bottom: 1rem;" [ngStyle]="{'visibility': visibilityOfRatings}">
+            <div class="ratings">
+                <div class="ratings-val" [style]="getAverageRating(data.reviews_rating)">
+                </div>
+            </div>
+            <a class="ratings-text">( {{data.reviews_rating.length}} Reviews )</a>
+        </div>
+        <div class="product-nav product-nav-thumbs" *ngIf='changeImgSrc'>
+            <a class="active" *ngFor="let imgSrc of data.colorChoiceImgSrc">
+                <img [src]="imgSrc" alt="product desc" (click)="onChangeImgColor(imgSrc)">
+            </a>
+        </div>
+    </div>
+</div> -->

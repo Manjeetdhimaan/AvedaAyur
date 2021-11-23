@@ -1,3 +1,5 @@
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
 html {
     font-size: 62.5%;
@@ -19432,4 +19434,5 @@ button:focus {
 
 a:hover {
     cursor: pointer;
+    color: #c96;
 }
