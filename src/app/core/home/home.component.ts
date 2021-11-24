@@ -40,7 +40,39 @@ export class HomeComponent implements OnInit {
       },
       1200: {
         "items": 4,
-      }
+      },
+      
+    },
+  }
+  customOptionsHerbs: OwlOptions = {
+    loop: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    margin: 20,
+    navSpeed: 400,
+    navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
+    responsive: {
+      0: {
+        "items": 1
+      },
+      480: {
+        "items": 2
+      },
+      600:{
+        "items": 4
+      },
+      768: {
+        "items": 5
+      },
+      992: {
+        "items": 6
+      },
+      1200: {
+        "items": 6,
+      },
+      
     },
   }
   customOptionsBrand: OwlOptions = {
@@ -70,6 +102,36 @@ export class HomeComponent implements OnInit {
       },
       1200: {
         "items": 7,
+      }
+    },
+  }
+  customOptionsPresence: OwlOptions = {
+    loop: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    margin: 20,
+    navSpeed: 400,
+    navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
+    responsive: {
+      0: {
+        "items": 2
+      },
+      480: {
+        "items": 2
+      },
+      600:{
+        "items": 3
+      },
+      768: {
+        "items": 3
+      },
+      992: {
+        "items": 4
+      },
+      1200: {
+        "items": 4,
       }
     },
   }
@@ -127,23 +189,21 @@ export class HomeComponent implements OnInit {
       },
       1200: {
         "items": 1,
-        "nav": true
       }
     },
-    nav: true
   }
   carouselHeight = 480;
   cellsToShow = 4;
   products:any[] = [
     {
-    "category": "clothing",
-    "subCategory": "Linen-blend dress",
+    "category": "health wellness",
+    "subCategory": "Ashwagandha",
     "label": "",
-    "price": "60.00",
+    "price": "492.00",
     "oldPrice": "",
     "imageSrc": [
-      "../../../../assets/images/demos/demo-12/products/product-1.jpg",
-      "../../../../assets/images/demos/demo-12/products/product-1-2.jpg"
+      "assets/images/ashwagandha-1-1.png",
+      "assets/images/ashwagandha-1-1.png"
     ],
     "color": [
       "#e5dcb1;",
@@ -170,14 +230,14 @@ export class HomeComponent implements OnInit {
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus cum\n    dolores assumenda asperiores facilis porro reprehenderit animi culpa\n    atque blanditiis commodi perspiciatis doloremque, possimus, explicabo,\n    autem fugit beatae quae voluptas!"
   },
   {
-    "category": "shoes",
-    "subCategory": "Sandlas with lacing",
-    "label": "Top",
+    "category": "health wellness",
+    "subCategory": "Ova-cyst",
+    "label": "",
     "price": "70.00",
     "oldPrice": "90.00",
     "imageSrc": [
-      "../../../../assets/images/demos/demo-12/products/product-2.jpg",
-      "../../../../assets/images/demos/demo-12/products/product-2-2.jpg"
+      "assets/images/ova-cyst.png",
+      "assets/images/ova-cyst.png"
     ],
     "color": [],
     "quantity": "1",
@@ -208,14 +268,14 @@ export class HomeComponent implements OnInit {
     "description": ""
   },
   {
-    "category": "clothing",
-    "subCategory": "Paper bag trousers",
+    "category": "Health Wellness",
+    "subCategory": "PILE OP",
     "label": "",
     "price": "60.00",
     "oldPrice": "",
     "imageSrc": [
-      "../../../../assets/images/demos/demo-12/products/product-3.jpg",
-      "../../../../assets/images/demos/demo-12/products/product-3-2.jpg"
+      "assets/images/pile-op.png",
+      "assets/images/pile-op.png"
     ],
     "color": [
       "#9fac76;",
@@ -249,14 +309,14 @@ export class HomeComponent implements OnInit {
     "description": ""
   },
   {
-    "category": "handbags",
-    "subCategory": "Bucket bag",
+    "category": "Health Wellness",
+    "subCategory": "Gastro G",
     "label": "",
     "price": "350.00",
     "oldPrice": "",
     "imageSrc": [
-      "../../../../assets/images/demos/demo-12/products/product-4.jpg",
-      "../../../../assets/images/demos/demo-12/products/product-4-2.jpg"
+      "assets/images/gastro-g.png",
+      "assets/images/gastro-g.png"
     ],
     "color": [],
     "quantity": "1",
@@ -289,12 +349,12 @@ export class HomeComponent implements OnInit {
   {
     "category": "clothing",
     "subCategory": "Silk-blended kaftan",
-    "label": "new",
+    "label": "",
     "price": "370.00",
     "oldPrice": "",
     "imageSrc": [
-      "../../../../assets/images/demos/demo-12/products/product-5.jpg",
-      "../../../../assets/images/demos/demo-12/products/product-5-2.jpg"
+      "assets/images/demos/demo-12/products/product-5.jpg",
+      "assets/images/demos/demo-12/products/product-5-2.jpg"
     ],
     "color": [],
     "quantity": "1",
@@ -331,8 +391,8 @@ export class HomeComponent implements OnInit {
     "price": "59.00",
     "oldPrice": "",
     "imageSrc": [
-      "../../../../assets/images/demos/demo-12/products/product-6.jpg",
-      "../../../../assets/images/demos/demo-12/products/product-6-2.jpg"
+      "assets/images/demos/demo-12/products/product-6.jpg",
+      "assets/images/demos/demo-12/products/product-6-2.jpg"
     ],
     "color": [],
     "quantity": "1",

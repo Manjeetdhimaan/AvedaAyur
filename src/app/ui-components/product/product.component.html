@@ -9,10 +9,18 @@
         <div class="product-action-vertical"><a (click)="onAddItemToWishList(data)" class="btn-product-icon btn-wishlist"><span>add to
             wishlist</span></a></div>
     </figure>
+    <div class="ratings-container" style="margin-top: 2rem;">
+        <div class="ratings">
+            <div class="ratings-val" [style]="getAverageRating(data.reviews_rating)">
+            </div>
+        </div>
+        <a class="ratings-text">( {{data.reviews_rating.length}} Reviews )</a>
+    </div>
     <div class="product-body">
         <h3 class="product-title"><a>{{ data.subCategory }}</a></h3>
-        <div class="product-price"> {{ data.price | currency}} </div>
+        <div class="product-price"> INR {{ data.price }} </div>
     </div>
+
     <div class="product-action">
         <button class="btn-product btn-cart" (click)="onAddtoCart(data)" [disabled]="getStockStatus(data.stockStatus)" [title]="getTitle(data.stockStatus)"><span>add to
           cart</span></button>
