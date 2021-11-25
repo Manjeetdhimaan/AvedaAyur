@@ -38,7 +38,7 @@ export class TimeAgoExtendsPipe extends TimeAgoPipe {}
     AppRoutingModule,
     CarouselModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

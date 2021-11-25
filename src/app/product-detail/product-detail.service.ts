@@ -13,9 +13,8 @@ export class ProductDetailService {
   
     constructor() {
       this.data = localStorage.getItem('productDetail')
-
       this.Json = JSON.parse(this.data);
-      this.productdetail = this.Json
+      this.productdetail = this.Json;
      
     }
     getProductDetail() {
@@ -27,5 +26,6 @@ export class ProductDetailService {
         this.productdetail = {};
         this.productdetail = item;
         localStorage.setItem('productDetail', JSON.stringify(this.productdetail))
+        return this.productdetail;
     }
 }

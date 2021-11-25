@@ -93,7 +93,7 @@ export class ProductComponent implements OnInit {
 
   goToProductDetailComponent() {
     console.log(this.data.subCategory.split(' ').join('-'))
-    this.router.navigate(['product-detail', this.data.subCategory.split(' ').join('-')]);
+    this.router.navigate(['', this.data.subCategory.split(' ').join('-')]);
   }
 
   getAverageRating(reviewsRatingList: any) {
