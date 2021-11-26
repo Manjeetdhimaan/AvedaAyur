@@ -15,6 +15,8 @@ import { InputSpinnerComponent } from './ui-components/input-spinner/input-spinn
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CartComponent } from './cart/cart.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Pipe({
   name: 'timeAgo',
@@ -31,7 +33,8 @@ export class TimeAgoExtendsPipe extends TimeAgoPipe {}
     SignupModelComponent,
     ProductComponent,
     ProductDetailComponent,
-    InputSpinnerComponent
+    InputSpinnerComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,8 @@ export class TimeAgoExtendsPipe extends TimeAgoPipe {}
     CarouselModule,
     BrowserAnimationsModule,
     NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

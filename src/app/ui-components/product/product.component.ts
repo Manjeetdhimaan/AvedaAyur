@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartService } from 'src/app/cart/cart.service';
 import { ProductDetailService } from 'src/app/product-detail/product-detail.service';
 
 @Component({
@@ -9,7 +10,10 @@ import { ProductDetailService } from 'src/app/product-detail/product-detail.serv
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private router:Router, private productDetailService:ProductDetailService) { }
+  constructor(
+    private router:Router,
+     private productDetailService:ProductDetailService,
+     private cartService: CartService) { }
 
 
   @Input() category: string = '';
@@ -76,9 +80,8 @@ export class ProductComponent implements OnInit {
     return (label == this.labelMapping[label]) ? true : false
   }
 
-  onAddtoCart( product:any) {
-    console.log('added')
-  //  this.shoppingCartService.onaddItemToCart(product.id)
+  onAddtoCart(product:any) {
+   this.cartService.onaddItemToCart(product);
   }   
 
 
@@ -92,7 +95,6 @@ export class ProductComponent implements OnInit {
   }
 
   goToProductDetailComponent() {
-    console.log(this.data.subCategory.split(' ').join('-'))
     this.router.navigate(['', this.data.subCategory.split(' ').join('-')]);
   }
 

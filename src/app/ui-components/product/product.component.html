@@ -21,7 +21,7 @@
     </div>
     <div class="product-body">
         <h3 class="product-title"><a>{{ data.subCategory }}</a></h3>
-        <div class="product-price"> INR {{ data.price }} </div>
+        <div class="product-price"><span class="currency">₹ </span>{{ data.price }} </div>
     </div>
 
     <div class="product-action">
@@ -29,7 +29,69 @@
           cart</span></button>
     </div>
 </div>
+
 <!-- </div> -->
+
+
+<!-- grid 2 -->
+
+<div class="">
+    <!-- <div class="product product-10 text-center"> -->
+    <div [ngClass]="setClass" *ngIf="layout=='grid2'">
+        <figure class="product-media">
+            <a>
+                <img [src]="imagesrc" alt="Product image" class="product-image">
+                <img *ngIf="data.imageSrc.length>1" [src]='data.imageSrc[1]' alt="Product image" class="product-image-hover">
+            </a>
+
+            <div class="product-action-vertical">
+                <a class="btn-product-icon btn-quickview" title="View Product" (click)="onAddToProductDetail(data)" (click)="goToProductDetailComponent()"><span>View Product</span></a>
+            </div>
+            <!-- End .product-action-vertical -->
+        </figure>
+        <!-- End .product-media -->
+
+        <div class="product-body">
+
+            <div class="product-action">
+                <button href="#" class="btn-cart" (click)="onAddtoCart(data)" [disabled]="getStockStatus(data.stockStatus)" [title]="getTitle(data.stockStatus)"><span>add to cart</span></button>
+                <a href="#" class="btn-product-icon btn-wishlist" (click)="onAddItemToWishList(data)"><span>Add to Wishlist</span></a>
+            </div>
+            <!-- End .product-action -->
+            <div class="product-intro">
+                <h3 class="product-title">
+                    <a>{{ data.subCategory }}</a>
+                </h3>
+                <!-- End .product-title -->
+                <div class="product-price">
+                    <span class="currency">₹ </span>{{ data.price }}
+                </div>
+                <!-- End .product-price -->
+            </div>
+            <div class="product-detail">
+                <div class="ratings-container">
+                    <div class="ratings">
+                        <div class="ratings-val" style="width: 80%;"></div>
+                        <!-- End .ratings-val -->
+                    </div>
+                    <!-- End .ratings -->
+                    <span class="ratings-text">( 6 Reviews )</span>
+                </div>
+                <!-- End .rating-container -->
+
+            </div>
+        </div>
+        <!-- End .product-body -->
+    </div>
+    <!-- End .product -->
+
+
+    <!-- End .product -->
+</div>
+
+
+
+
 
 
 <!-- 

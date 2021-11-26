@@ -2,12 +2,12 @@
     <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
         <div class="container d-flex align-items-center">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a routerLink="home">Home</a></li>
+                <li class="breadcrumb-item"><a routerLink="">Home</a></li>
                 <li class="breadcrumb-item"><a>Products</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Default</li>
             </ol>
 
-            <nav class="product-pager ml-auto" aria-label="Product">
+            <!-- <nav class="product-pager ml-auto" aria-label="Product">
                 <a class="product-pager-link product-pager-prev" aria-label="Previous" tabindex="-1">
                     <i class="icon-angle-left"></i>
                     <span>Prev</span>
@@ -17,7 +17,7 @@
                     <span>Next</span>
                     <i class="icon-angle-right"></i>
                 </a>
-            </nav>
+            </nav> -->
             <!-- End .pager-nav -->
         </div>
         <!-- End .container -->
@@ -40,12 +40,10 @@
 
                                 <div id="product-zoom-gallery" class="product-image-gallery">
                                     <a data-image="assets/images/products/single/1.jpg" data-zoom-image="assets/images/products/single/1-big.jpg">
-                                        <!-- <a *ngFor="let image of productdetail?.imageSrc" (click)="onChangeImgColor(image)" [ngClass]="image==imagesrc?'product-gallery-item active':'product-gallery-item'">
+                                        <div *ngFor="let image of productdetail?.imageSrc" (click)="onChangeImgColor(image)" [ngClass]="image==imagesrc?'product-gallery-item active':'product-gallery-item'">
                                             <img [src]='image' alt="product side">
-                                        </a> -->
-
+                                        </div>
                                     </a>
-
                                 </div>
                                 <!-- End .product-image-gallery -->
                             </div>
@@ -72,7 +70,7 @@
                             <!-- End .rating-container -->
 
                             <div class="product-price">
-                                ₹ {{ productdetail?.price*productdetail?.quantity }}
+                                <span class="currency">₹ </span> {{ productdetail?.price*productdetail?.quantity }}
                             </div>
                             <!-- End .product-price -->
 
@@ -121,7 +119,7 @@
                             <!-- End .details-filter-row -->
 
                             <div class="product-details-action">
-                                <a *ngIf="!getStockStatus(productdetail?.stockStatus)" (click)="onAddItemToCart(productdetail)" class="btn-product btn-cart"><span>add to cart</span></a>
+                                <div *ngIf="!getStockStatus(productdetail?.stockStatus)" (click)="onAddItemToCart(productdetail)" class="btn-product btn-cart"><span>add to cart</span></div>
                                 <span *ngIf="getStockStatus(productdetail?.stockStatus)" class="out-of-stock">Out of stock</span>
                                 <div class="details-action-wrapper">
                                     <a (click)="onAddItemToWishlsit(productdetail)" class="btn-product btn-wishlist" title="Wishlist"><span>Add to
@@ -242,7 +240,7 @@
                                             <!-- End .ratings -->
                                         </div>
                                         <!-- End .rating-container -->
-                                        <span class="review-date">{{ review.time  }}</span>
+                                        <span class="review-date">{{ review.time }}</span>
                                     </div>
                                     <!-- End .col -->
                                     <div class="col">

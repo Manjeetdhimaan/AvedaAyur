@@ -19432,7 +19432,17 @@ button:focus {
     content: '\f7e3'
 }
 
+.btn-primary span {
+    color: white
+}
+
 a:hover {
     cursor: pointer;
     color: #c96;
+}
+
+.currency {
+    font-family: monospace;
+    font-size: 95%;
+    margin-right: .50%;
 }

@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartService } from '../cart/cart.service';
 import { ProductService } from '../ui-components/product/product.service';
 import { ProductDetailService } from './product-detail.service';
 
@@ -13,11 +14,17 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   constructor(
     private productDetailService: ProductDetailService,
     private router: Router,
-   private productService: ProductService) { }
+    private productService: ProductService,
+    private cartService:CartService) { }
 
 
   productdetail: any
   show = false
+
+  public data: any;
+  public Json: any;
+  public userToken: any;
+
   ngOnInit(): void {
     console.log(this.router.url.slice(1).split('-').join(' '))
     this.productdetail = this.productDetailService.getProductDetail()
@@ -36,18 +43,17 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         else {
           this.productdetail = a;
           localStorage.setItem('productDetail', JSON.stringify(this.productdetail));
+          this.imagesrc = this.productdetail.imageSrc[0]
         }
-
       }
     })
-
-
   }
 
 
 
   onAddItemToCart(item: any) {
-    //  this.shoppingCartService.onaddItemToCart(item.id)  
+   
+     this.cartService.onaddItemToCart(item)  
   }
 
 
@@ -64,7 +70,6 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   imagesrc = "";
   onChangeImgColor(imageNameObject: any) {
     this.imagesrc = imageNameObject;
-    console.log('changed')
   }
 
   // widthOfReviewStarRating:any =[]
@@ -99,9 +104,6 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   onDislike(item: any) {
     item.reviewdislikes++
   }
-  public data: any;
-  public Json: any;
-  public userToken: any;
   nextProduct() {
     // this.productService.products.map((a: any, i:any) => {
     //   // console.log(this.productdetail.subCategory)
@@ -122,7 +124,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     // })
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     localStorage.removeItem('productDetail')
   }
 }

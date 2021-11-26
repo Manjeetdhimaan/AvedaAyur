@@ -58,7 +58,7 @@
                         <h1 class="intro-title">Ypperlig <br>Coffee Table <br><span class="text-primary"><sup>$</sup>49,99</span></h1>
                         <!-- End .intro-title -->
 
-                        <a href="category.html" class="btn btn-primary">
+                        <a class="btn btn-primary" routerLink="">
                             <span>Shop Now</span>
                             <i class="icon-long-arrow-right"></i>
                         </a>
@@ -79,7 +79,7 @@
                         </h1>
                         <!-- End .intro-title -->
 
-                        <a href="category.html" class="btn btn-primary">
+                        <a class="btn btn-primary" routerLink="">
                             <span>Shop Now</span>
                             <i class="icon-long-arrow-right"></i>
                         </a>
@@ -96,42 +96,42 @@
             <owl-carousel-o [options]="customOptionsBrand" class="">
                 <ng-container>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/brands/cert-1.png" alt="Brand Name">
                         </a>
                     </ng-template>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/brands/cert-2.png" alt="Brand Name">
                         </a>
                     </ng-template>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/brands/cert-3.png" alt="Brand Name">
                         </a>
                     </ng-template>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/brands/cert-4.png" alt="Brand Name">
                         </a>
                     </ng-template>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/brands/cert-5.png" alt="Brand Name">
                         </a>
                     </ng-template>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/brands/cert-6.png" alt="Brand Name">
                         </a>
                     </ng-template>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/brands/cert-7.png" alt="Brand Name">
                         </a>
                     </ng-template>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/brands/cert-8.jpeg" alt="Brand Name">
                         </a>
                     </ng-template>
@@ -150,7 +150,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-5">
                     <div class="banner banner-large banner-overlay banner-overlay-light">
-                        <a href="#">
+                        <a>
                             <img src="https://avedaayur.com/wp-content/uploads/2021/06/ABPA-REVERSAl.jpg" alt="Banner">
                         </a>
 
@@ -158,21 +158,21 @@
                             <h4 class="banner-subtitle">Clearence</h4>
                             <h3 class="banner-title">Aarogya vardhini Vati</h3>
                             <div class="banner-text">from INR 19.99</div>
-                            <a href="#" class="btn btn-outline-gray banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
+                            <a class="btn btn-outline-gray banner-link" routerLink="">Shop Now<i class="icon-long-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3">
                     <div class="banner banner-overlay">
-                        <a href="#">
+                        <a>
                             <img src="assets/images/demos/demo-2/banners/banner-2.jpg" alt="Banner">
                         </a>
 
                         <div class="banner-content banner-content-bottom">
                             <h3 class="banner-title text-white">Artho Aid Oil</h3>
                             <div class="banner-text text-white">from INR 139.99</div>
-                            <a href="#" class="btn btn-outline-white banner-link">Discover Now<i
+                            <a class="btn btn-outline-white banner-link" routerLink="">Discover Now<i
                   class="icon-long-arrow-right"></i></a>
                         </div>
                     </div>
@@ -180,25 +180,25 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="banner banner-overlay">
-                        <a href="#">
+                        <a>
                             <img src="assets/images/demos/demo-2/banners/banner-3.jpg" alt="Banner">
                         </a>
 
                         <div class="banner-content banner-content-top">
                             <h3 class="banner-title text-white">Antioxidant Rich Pack</h3>
-                            <a href="#" class="btn btn-outline-white banner-link">Discover Now<i
+                            <a class="btn btn-outline-white banner-link" routerLink="">Discover Now<i
                   class="icon-long-arrow-right"></i></a>
                         </div>
                     </div>
 
                     <div class="banner banner-overlay banner-overlay-light">
-                        <a href="#">
+                        <a>
                             <img src="assets/images/demos/demo-2/banners/banner-4.jpg" alt="Banner">
                         </a>
 
                         <div class="banner-content banner-content-top">
                             <h3 class="banner-title">Arjuna</h3>
-                            <a href="#" class="btn btn-outline-gray banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
+                            <a class="btn btn-outline-gray banner-link" routerLink="">Shop Now<i class="icon-long-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -229,10 +229,10 @@
             <!-- class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow" -->
             <div class="tab-pane p-0 fade show active" id="products-featured-tab" role="tabpanel" aria-labelledby="products-featured-link">
                 <div class="container">
-                    <owl-carousel-o [options]="customOptions" class="">
+                    <owl-carousel-o [options]="customOptions" class="owl-simple carousel-equal-height carousel-with-shadow text-center">
                         <ng-container>
                             <ng-template carouselSlide *ngFor="let product of products">
-                                <app-product [data]="product" [setClass]="setClass" [imagesrc]="product.imageSrc[0]" [changeImgSrc]='changeImgSrc'></app-product>
+                                <app-product [data]="product" [setClass]="setClass" [imagesrc]="product.imageSrc[0]" [changeImgSrc]='changeImgSrc' layout='grid2'></app-product>
                                 <!-- End .product -->
                             </ng-template>
                         </ng-container>
@@ -272,13 +272,13 @@
                         }'>
                     <div class="product product-11 text-center">
                         <figure class="product-media">
-                            <a href="product.html">
+                            <a>
                                 <img src="assets/images/demos/demo-2/products/product-5-1.jpg" alt="Product image" class="product-image">
                                 <img src="assets/images/demos/demo-2/products/product-5-2.jpg" alt="Product image" class="product-image-hover">
                             </a>
 
                             <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                <a routerLink="" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
                             </div>
                             <!-- End .product-action-vertical -->
 
@@ -286,7 +286,7 @@
                         <!-- End .product-media -->
 
                         <div class="product-body">
-                            <h3 class="product-title"><a href="product.html">Petite Table Lamp</a></h3>
+                            <h3 class="product-title"><a>Petite Table Lamp</a></h3>
                             <!-- End .product-title -->
                             <div class="product-price">
                                 $675,00
@@ -294,14 +294,14 @@
                             <!-- End .product-price -->
 
                             <div class="product-nav product-nav-dots">
-                                <a href="#" class="active" style="background: #74543e;"><span class="sr-only">Color name</span></a>
-                                <a href="#" style="background: #e8e8e8;"><span class="sr-only">Color name</span></a>
+                                <a class="active" style="background: #74543e;"><span class="sr-only">Color name</span></a>
+                                <a style="background: #e8e8e8;"><span class="sr-only">Color name</span></a>
                             </div>
                             <!-- End .product-nav -->
                         </div>
                         <!-- End .product-body -->
                         <div class="product-action">
-                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                            <a class="btn-product btn-cart"><span>add to cart</span></a>
                         </div>
                         <!-- End .product-action -->
                     </div>
@@ -309,13 +309,13 @@
 
                     <div class="product product-11 text-center">
                         <figure class="product-media">
-                            <a href="product.html">
+                            <a>
                                 <img src="assets/images/demos/demo-2/products/product-6-1.jpg" alt="Product image" class="product-image">
                                 <img src="assets/images/demos/demo-2/products/product-6-2.jpg" alt="Product image" class="product-image-hover">
                             </a>
 
                             <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                <a routerLink="" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
                             </div>
                             <!-- End .product-action-vertical -->
 
@@ -323,7 +323,7 @@
                         <!-- End .product-media -->
 
                         <div class="product-body">
-                            <h3 class="product-title"><a href="product.html">Elephant Armchair</a></h3>
+                            <h3 class="product-title"><a>Elephant Armchair</a></h3>
                             <!-- End .product-title -->
                             <div class="product-price">
                                 $457,00
@@ -332,7 +332,7 @@
                         </div>
                         <!-- End .product-body -->
                         <div class="product-action">
-                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                            <a routerLink="" class="btn-product btn-cart"><span>add to cart</span></a>
                         </div>
                         <!-- End .product-action -->
                     </div>
@@ -340,13 +340,13 @@
 
                     <div class="product product-11 text-center">
                         <figure class="product-media">
-                            <a href="product.html">
+                            <a>
                                 <img src="assets/images/demos/demo-2/products/product-1-1.jpg" alt="Product image" class="product-image">
                                 <img src="assets/images/demos/demo-2/products/product-1-2.jpg" alt="Product image" class="product-image-hover">
                             </a>
 
                             <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                <a routerLink="" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
                             </div>
                             <!-- End .product-action-vertical -->
 
@@ -354,7 +354,7 @@
                         <!-- End .product-media -->
 
                         <div class="product-body">
-                            <h3 class="product-title"><a href="product.html">Butler Stool Ladder</a></h3>
+                            <h3 class="product-title"><a>Butler Stool Ladder</a></h3>
                             <!-- End .product-title -->
                             <div class="product-price">
                                 $251,00
@@ -363,7 +363,7 @@
                         </div>
                         <!-- End .product-body -->
                         <div class="product-action">
-                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                            <a routerLink="" class="btn-product btn-cart"><span>add to cart</span></a>
                         </div>
                         <!-- End .product-action -->
                     </div>
@@ -402,20 +402,20 @@
                         }'>
                     <div class="product product-11 text-center">
                         <figure class="product-media">
-                            <a href="product.html">
+                            <a>
                                 <img src="assets/images/demos/demo-2/products/product-2-1.jpg" alt="Product image" class="product-image">
                                 <img src="assets/images/demos/demo-2/products/product-2-2.jpg" alt="Product image" class="product-image-hover">
                             </a>
 
                             <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                <a class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
                             </div>
                             <!-- End .product-action-vertical -->
                         </figure>
                         <!-- End .product-media -->
 
                         <div class="product-body">
-                            <h3 class="product-title"><a href="product.html">Octo 4240</a></h3>
+                            <h3 class="product-title"><a>Octo 4240</a></h3>
                             <!-- End .product-title -->
                             <div class="product-price">
                                 $746,00
@@ -423,14 +423,14 @@
                             <!-- End .product-price -->
 
                             <div class="product-nav product-nav-dots">
-                                <a href="#" class="active" style="background: #1f1e18;"><span class="sr-only">Color name</span></a>
-                                <a href="#" style="background: #e8e8e8;"><span class="sr-only">Color name</span></a>
+                                <a class="active" style="background: #1f1e18;"><span class="sr-only">Color name</span></a>
+                                <a style="background: #e8e8e8;"><span class="sr-only">Color name</span></a>
                             </div>
                             <!-- End .product-nav -->
                         </div>
                         <!-- End .product-body -->
                         <div class="product-action">
-                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                            <a class="btn-product btn-cart"><span>add to cart</span></a>
                         </div>
                         <!-- End .product-action -->
                     </div>
@@ -439,13 +439,13 @@
                     <div class="product product-11 text-center">
                         <figure class="product-media">
                             <span class="product-label label-circle label-new">New</span>
-                            <a href="product.html">
+                            <a>
                                 <img src="assets/images/demos/demo-2/products/product-3-1.jpg" alt="Product image" class="product-image">
                                 <img src="assets/images/demos/demo-2/products/product-3-2.jpg" alt="Product image" class="product-image-hover">
                             </a>
 
                             <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                <a class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
                             </div>
                             <!-- End .product-action-vertical -->
 
@@ -453,7 +453,7 @@
                         <!-- End .product-media -->
 
                         <div class="product-body">
-                            <h3 class="product-title"><a href="product.html">Flow Slim Armchair</a></h3>
+                            <h3 class="product-title"><a>Flow Slim Armchair</a></h3>
                             <!-- End .product-title -->
                             <div class="product-price">
                                 $970,00
@@ -462,7 +462,7 @@
                         </div>
                         <!-- End .product-body -->
                         <div class="product-action">
-                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                            <a class="btn-product btn-cart"><span>add to cart</span></a>
                         </div>
                         <!-- End .product-action -->
                     </div>
@@ -471,13 +471,13 @@
                     <div class="product product-11 text-center">
                         <figure class="product-media">
                             <span class="product-label label-circle label-sale">Sale</span>
-                            <a href="product.html">
+                            <a>
                                 <img src="assets/images/demos/demo-2/products/product-4-1.jpg" alt="Product image" class="product-image">
                                 <img src="assets/images/demos/demo-2/products/product-4-2.jpg" alt="Product image" class="product-image-hover">
                             </a>
 
                             <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                <a class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
                             </div>
                             <!-- End .product-action-vertical -->
 
@@ -485,7 +485,7 @@
                         <!-- End .product-media -->
 
                         <div class="product-body">
-                            <h3 class="product-title"><a href="product.html">Roots Sofa Bed</a></h3>
+                            <h3 class="product-title"><a>Roots Sofa Bed</a></h3>
                             <!-- End .product-title -->
                             <div class="product-price">
                                 <span class="new-price">$337,00</span>
@@ -494,14 +494,14 @@
                             <!-- End .product-price -->
 
                             <div class="product-nav product-nav-dots">
-                                <a href="#" class="active" style="background: #878883;"><span class="sr-only">Color name</span></a>
-                                <a href="#" style="background: #dfd5c2;"><span class="sr-only">Color name</span></a>
+                                <a class="active" style="background: #878883;"><span class="sr-only">Color name</span></a>
+                                <a style="background: #dfd5c2;"><span class="sr-only">Color name</span></a>
                             </div>
                             <!-- End .product-nav -->
                         </div>
                         <!-- End .product-body -->
                         <div class="product-action">
-                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                            <a class="btn-product btn-cart"><span>add to cart</span></a>
                         </div>
                         <!-- End .product-action -->
                     </div>
@@ -527,7 +527,7 @@
                             <h4>Limited Quantities</h4>
                             <h2>Deal of the Day</h2>
 
-                            <h3 class="product-title"><a href="product.html">POÄNG</a></h3>
+                            <h3 class="product-title"><a >POÄNG</a></h3>
 
                             <div class="product-price">
                                 <span class="new-price">$149.00</span>
@@ -535,12 +535,12 @@
                             </div>
 
 
-                            <a href="product.html" class="btn btn-primary">
+                            <a  class="btn btn-primary">
                                 <span>Shop Now</span><i class="icon-long-arrow-right"></i>
                             </a>
                         </div>
                         <div class="deal-image">
-                            <a href="product.html">
+                            <a >
                                 <img src="assets/images/demos/demo-2/deal/product-1.jpg" alt="image">
                             </a>
                         </div>
@@ -549,14 +549,14 @@
 
                 <div class="col-lg-3">
                     <div class="banner banner-overlay banner-overlay-light text-center d-none d-lg-block">
-                        <a href="#">
+                        <a >
                             <img src="assets/images/demos/demo-2/banners/banner-5.jpg" alt="Banner">
                         </a>
                         <div class="banner-content banner-content-top banner-content-center">
                             <h4 class="banner-subtitle">The Best Choice</h4>
                             <h3 class="banner-title">AGEN</h3>
                             <div class="banner-text text-primary">$49.99</div>
-                            <a href="#" class="btn btn-outline-gray banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
+                            <a  class="btn btn-outline-gray banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -573,7 +573,7 @@
                     <ng-template carouselSlide>
                         <article class="entry entry-display">
                             <figure class="entry-media">
-                                <a href="single.html">
+                                <a>
                                     <img src="assets/images/herbs/herb-1.png" alt="image desc">
                                 </a>
                             </figure>
@@ -584,12 +584,12 @@
                                 <!-- End .entry-meta -->
 
                                 <h3 class="entry-title">
-                                    <a href="single.html">Sed adipiscing ornare.</a>
+                                    <a>Sed adipiscing ornare.</a>
                                 </h3>
                                 <!-- End .entry-title -->
 
                                 <div class="entry-content">
-                                    <a href="single.html" class="read-more">Continue Reading</a>
+                                    <a class="read-more">Continue Reading</a>
                                 </div>
                                 <!-- End .entry-content -->
                             </div>
@@ -599,7 +599,7 @@
                     <ng-template carouselSlide>
                         <article class="entry entry-display">
                             <figure class="entry-media">
-                                <a href="single.html">
+                                <a>
                                     <img src="assets/images/herbs/herb-2.jpg" alt="image desc">
                                 </a>
                             </figure>
@@ -610,12 +610,12 @@
                                 <!-- End .entry-meta -->
 
                                 <h3 class="entry-title">
-                                    <a href="single.html">Sed adipiscing ornare.</a>
+                                    <a>Sed adipiscing ornare.</a>
                                 </h3>
                                 <!-- End .entry-title -->
 
                                 <div class="entry-content">
-                                    <a href="single.html" class="read-more">Continue Reading</a>
+                                    <a class="read-more">Continue Reading</a>
                                 </div>
                                 <!-- End .entry-content -->
                             </div>
@@ -625,7 +625,7 @@
                     <ng-template carouselSlide>
                         <article class="entry entry-display">
                             <figure class="entry-media">
-                                <a href="single.html">
+                                <a>
                                     <img src="assets/images/herbs/herb-3.png" alt="image desc">
                                 </a>
                             </figure>
@@ -636,12 +636,12 @@
                                 <!-- End .entry-meta -->
 
                                 <h3 class="entry-title">
-                                    <a href="single.html">Sed adipiscing ornare.</a>
+                                    <a>Sed adipiscing ornare.</a>
                                 </h3>
                                 <!-- End .entry-title -->
 
                                 <div class="entry-content">
-                                    <a href="single.html" class="read-more">Continue Reading</a>
+                                    <a class="read-more">Continue Reading</a>
                                 </div>
                                 <!-- End .entry-content -->
                             </div>
@@ -651,7 +651,7 @@
                     <ng-template carouselSlide>
                         <article class="entry entry-display">
                             <figure class="entry-media">
-                                <a href="single.html">
+                                <a>
                                     <img src="assets/images/herbs/herb-4.jpg" alt="image desc">
                                 </a>
                             </figure>
@@ -660,12 +660,12 @@
                             <div class="entry-body text-center">
 
                                 <h3 class="entry-title">
-                                    <a href="single.html">Sed adipiscing ornare.</a>
+                                    <a>Sed adipiscing ornare.</a>
                                 </h3>
                                 <!-- End .entry-title -->
 
                                 <div class="entry-content">
-                                    <a href="single.html" class="read-more">Continue Reading</a>
+                                    <a class="read-more">Continue Reading</a>
                                 </div>
                                 <!-- End .entry-content -->
                             </div>
@@ -675,7 +675,7 @@
                     <ng-template carouselSlide>
                         <article class="entry entry-display">
                             <figure class="entry-media">
-                                <a href="single.html">
+                                <a>
                                     <img src="assets/images/herbs/herb-5.png" alt="image desc">
                                 </a>
                             </figure>
@@ -686,12 +686,12 @@
                                 <!-- End .entry-meta -->
 
                                 <h3 class="entry-title">
-                                    <a href="single.html">Fusce lacinia arcuet nulla.</a>
+                                    <a>Fusce lacinia arcuet nulla.</a>
                                 </h3>
                                 <!-- End .entry-title -->
 
                                 <div class="entry-content">
-                                    <a href="single.html" class="read-more">Continue Reading</a>
+                                    <a class="read-more">Continue Reading</a>
                                 </div>
                                 <!-- End .entry-content -->
                             </div>
@@ -701,7 +701,7 @@
                     <ng-template carouselSlide>
                         <article class="entry entry-display">
                             <figure class="entry-media">
-                                <a href="single.html">
+                                <a>
                                     <img src="assets/images/herbs/herb-6.png" alt="image desc">
                                 </a>
                             </figure>
@@ -712,12 +712,12 @@
                                 <!-- End .entry-meta -->
 
                                 <h3 class="entry-title">
-                                    <a href="single.html">Quisque volutpat mattis eros.</a>
+                                    <a>Quisque volutpat mattis eros.</a>
                                 </h3>
                                 <!-- End .entry-title -->
 
                                 <div class="entry-content">
-                                    <a href="single.html" class="read-more">Continue Reading</a>
+                                    <a class="read-more">Continue Reading</a>
                                 </div>
                                 <!-- End .entry-content -->
                             </div>
@@ -731,7 +731,7 @@
             <!-- End .owl-carousel -->
 
             <div class="more-container text-center mt-2">
-                <a href="blog.html" class="btn btn-outline-darker btn-more"><span>More Herbs & Wiki</span><i
+                <a class="btn btn-outline-darker btn-more"><span>More Herbs & Wiki</span><i
             class="icon-long-arrow-right"></i></a>
             </div>
             <!-- End .more-container -->
@@ -770,27 +770,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-7-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-7-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Lighting</a>
+                                        <a >Lighting</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Petite Table Lamp</a></h3>
+                                    <h3 class="product-title"><a >Petite Table Lamp</a></h3>
                                     <div class="product-price">
                                         $401,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -798,33 +798,33 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-8-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-8-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Decor</a>
+                                        <a >Decor</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Madra Log Holder</a></h3>
+                                    <h3 class="product-title"><a >Madra Log Holder</a></h3>
                                     <div class="product-price">
                                         $401,00
                                     </div>
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #927764;"><span class="sr-only">Color name</span></a>
+                                        <a  class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a  style="background: #927764;"><span class="sr-only">Color name</span></a>
                                     </div>
 
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -833,28 +833,28 @@
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-sale">Sale</span>
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-9-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-9-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Furniture</a>
+                                        <a >Furniture</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Garden Armchair</a></h3>
+                                    <h3 class="product-title"><a >Garden Armchair</a></h3>
                                     <div class="product-price">
                                         <span class="new-price">$94,00</span>
                                         <span class="old-price">Was $94,00</span>
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -862,33 +862,33 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-10-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-10-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Lighting</a>
+                                        <a >Lighting</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Carronade Large Suspension Lamp</a></h3>
+                                    <h3 class="product-title"><a >Carronade Large Suspension Lamp</a></h3>
                                     <div class="product-price">
                                         $401,00
                                     </div>
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #e8e8e8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a  class="active" style="background: #e8e8e8;"><span class="sr-only">Color name</span></a>
+                                        <a  style="background: #333333;"><span class="sr-only">Color name</span></a>
                                     </div>
 
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -896,27 +896,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-11-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-11-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Decor</a>
+                                        <a >Decor</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Original Outdoor Beanbag</a></h3>
+                                    <h3 class="product-title"><a >Original Outdoor Beanbag</a></h3>
                                     <div class="product-price">
                                         $259,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -925,27 +925,27 @@
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-new">New</span>
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-12-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-12-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Furniture</a>
+                                        <a >Furniture</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">2-Seater</a></h3>
+                                    <h3 class="product-title"><a >2-Seater</a></h3>
                                     <div class="product-price">
                                         $3.107,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -953,27 +953,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-13-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-13-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Furniture</a>
+                                        <a >Furniture</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Wingback Chair</a></h3>
+                                    <h3 class="product-title"><a >Wingback Chair</a></h3>
                                     <div class="product-price">
                                         $2.486,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -981,27 +981,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-14-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-14-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Decor</a>
+                                        <a >Decor</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Cushion Set 3 Pieces</a></h3>
+                                    <h3 class="product-title"><a >Cushion Set 3 Pieces</a></h3>
                                     <div class="product-price">
                                         $199,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1009,27 +1009,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-15-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-15-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Decor</a>
+                                        <a >Decor</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Cushion Set 3 Pieces</a></h3>
+                                    <h3 class="product-title"><a >Cushion Set 3 Pieces</a></h3>
                                     <div class="product-price">
                                         $199,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1037,27 +1037,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-16-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-16-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Lighting</a>
+                                        <a >Lighting</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Carronade Table Lamp</a></h3>
+                                    <h3 class="product-title"><a >Carronade Table Lamp</a></h3>
                                     <div class="product-price">
                                         $499,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1071,28 +1071,28 @@
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-sale">Sale</span>
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-9-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-9-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Furniture</a>
+                                        <a >Furniture</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Garden Armchair</a></h3>
+                                    <h3 class="product-title"><a >Garden Armchair</a></h3>
                                     <div class="product-price">
                                         <span class="new-price">$94,00</span>
                                         <span class="old-price">Was $94,00</span>
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1101,27 +1101,27 @@
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-new">New</span>
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-12-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-12-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Furniture</a>
+                                        <a >Furniture</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">2-Seater</a></h3>
+                                    <h3 class="product-title"><a >2-Seater</a></h3>
                                     <div class="product-price">
                                         $3.107,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1129,27 +1129,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-13-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-13-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Furniture</a>
+                                        <a >Furniture</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Wingback Chair</a></h3>
+                                    <h3 class="product-title"><a >Wingback Chair</a></h3>
                                     <div class="product-price">
                                         $2.486,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1162,33 +1162,33 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-8-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-8-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Decor</a>
+                                        <a >Decor</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Madra Log Holder</a></h3>
+                                    <h3 class="product-title"><a >Madra Log Holder</a></h3>
                                     <div class="product-price">
                                         $401,00
                                     </div>
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #927764;"><span class="sr-only">Color name</span></a>
+                                        <a  class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a  style="background: #927764;"><span class="sr-only">Color name</span></a>
                                     </div>
 
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1196,27 +1196,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-11-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-11-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Decor</a>
+                                        <a >Decor</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Original Outdoor Beanbag</a></h3>
+                                    <h3 class="product-title"><a >Original Outdoor Beanbag</a></h3>
                                     <div class="product-price">
                                         $259,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1224,27 +1224,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-14-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-14-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Decor</a>
+                                        <a >Decor</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Cushion Set 3 Pieces</a></h3>
+                                    <h3 class="product-title"><a >Cushion Set 3 Pieces</a></h3>
                                     <div class="product-price">
                                         $199,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1252,27 +1252,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-15-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-15-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Decor</a>
+                                        <a >Decor</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Cushion Set 3 Pieces</a></h3>
+                                    <h3 class="product-title"><a >Cushion Set 3 Pieces</a></h3>
                                     <div class="product-price">
                                         $199,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1285,27 +1285,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-7-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-7-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Lighting</a>
+                                        <a >Lighting</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Petite Table Lamp</a></h3>
+                                    <h3 class="product-title"><a >Petite Table Lamp</a></h3>
                                     <div class="product-price">
                                         $401,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1313,33 +1313,33 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-10-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-10-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Lighting</a>
+                                        <a >Lighting</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Carronade Large Suspension Lamp</a></h3>
+                                    <h3 class="product-title"><a >Carronade Large Suspension Lamp</a></h3>
                                     <div class="product-price">
                                         $401,00
                                     </div>
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #e8e8e8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a  class="active" style="background: #e8e8e8;"><span class="sr-only">Color name</span></a>
+                                        <a  style="background: #333333;"><span class="sr-only">Color name</span></a>
                                     </div>
 
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1347,27 +1347,27 @@
                         <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a >
                                         <img src="assets/images/demos/demo-2/products/product-16-1.jpg" alt="Product image" class="product-image">
                                         <img src="assets/images/demos/demo-2/products/product-16-2.jpg" alt="Product image" class="product-image-hover">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                        <a  class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
                                     </div>
                                 </figure>
 
                                 <div class="product-body">
                                     <div class="product-cat">
-                                        <a href="#">Lighting</a>
+                                        <a >Lighting</a>
                                     </div>
-                                    <h3 class="product-title"><a href="product.html">Carronade Table Lamp</a></h3>
+                                    <h3 class="product-title"><a >Carronade Table Lamp</a></h3>
                                     <div class="product-price">
                                         $499,00
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <a  class="btn-product btn-cart"><span>add to cart</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1391,7 +1391,7 @@
                     <ng-template carouselSlide>
                         <article class="entry entry-display">
                             <figure class="entry-media">
-                                <a href="single.html">
+                                <a>
                                     <img src="assets/images/blog/blog-1.jpeg" alt="image desc">
                                 </a>
                             </figure>
@@ -1402,12 +1402,12 @@
                                 <!-- End .entry-meta -->
 
                                 <h3 class="entry-title">
-                                    <a href="single.html">Health Benefits of Moringa Oleifera (drum stick), Overview, Uses and Side effect</a>
+                                    <a>Health Benefits of Moringa Oleifera (drum stick), Overview, Uses and Side effect</a>
                                 </h3>
                                 <!-- End .entry-title -->
 
                                 <div class="entry-content">
-                                    <a href="single.html" class="read-more">Continue Reading</a>
+                                    <a class="read-more">Continue Reading</a>
                                 </div>
                                 <!-- End .entry-content -->
                             </div>
@@ -1417,7 +1417,7 @@
                     <ng-template carouselSlide>
                         <article class="entry entry-display">
                             <figure class="entry-media">
-                                <a href="single.html">
+                                <a>
                                     <img src="assets/images/blog/blog-2.jpg" alt="image desc">
                                 </a>
                             </figure>
@@ -1428,12 +1428,12 @@
                                 <!-- End .entry-meta -->
 
                                 <h3 class="entry-title">
-                                    <a href="single.html">Ayurvedic Treatment for Stress and Anxiety.</a>
+                                    <a>Ayurvedic Treatment for Stress and Anxiety.</a>
                                 </h3>
                                 <!-- End .entry-title -->
 
                                 <div class="entry-content">
-                                    <a href="single.html" class="read-more">Continue Reading</a>
+                                    <a class="read-more">Continue Reading</a>
                                 </div>
                                 <!-- End .entry-content -->
                             </div>
@@ -1443,7 +1443,7 @@
                     <ng-template carouselSlide>
                         <article class="entry entry-display">
                             <figure class="entry-media">
-                                <a href="single.html">
+                                <a>
                                     <img src="assets/images/blog/blog-3.jpg" alt="image desc">
                                 </a>
                             </figure>
@@ -1454,12 +1454,12 @@
                                 <!-- End .entry-meta -->
 
                                 <h3 class="entry-title">
-                                    <a href="single.html">Ayurvedic Treatment for Joint Pain</a>
+                                    <a>Ayurvedic Treatment for Joint Pain</a>
                                 </h3>
                                 <!-- End .entry-title -->
 
                                 <div class="entry-content">
-                                    <a href="single.html" class="read-more">Continue Reading</a>
+                                    <a class="read-more">Continue Reading</a>
                                 </div>
                                 <!-- End .entry-content -->
                             </div>
@@ -1473,7 +1473,7 @@
             <!-- End .owl-carousel -->
 
             <div class="more-container text-center mt-2">
-                <a href="blog.html" class="btn btn-outline-darker btn-more"><span>View more articles</span><i
+                <a class="btn btn-outline-darker btn-more"><span>View more articles</span><i
             class="icon-long-arrow-right"></i></a>
             </div>
             <!-- End .more-container -->
@@ -1486,27 +1486,27 @@
             <owl-carousel-o [options]="customOptionsPresence" class="brands-border">
                 <ng-container>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/presence/Amazon-Logo.jpg" alt="Brand Name">
                         </a>
                     </ng-template>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/presence/flipkart.png" alt="Brand Name">
                         </a>
                     </ng-template>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/presence/healthmug.png" alt="Brand Name">
                         </a>
                     </ng-template>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/presence/myupchar.png" alt="Brand Name">
                         </a>
                     </ng-template>
                     <ng-template carouselSlide>
-                        <a href="#" class="brand">
+                        <a class="brand">
                             <img src="assets/images/presence/TATA.png" alt="Brand Name">
                         </a>
                     </ng-template>

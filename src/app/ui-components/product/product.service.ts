@@ -8,6 +8,7 @@ export class ProductService {
   constructor() { }
   products:any[] = [
     {
+      "id":"a1",
     "category": "health wellness",
     "subCategory": "Ashwagandha",
     "label": "",
@@ -22,7 +23,7 @@ export class ProductService {
       "#bacbd8;"
     ],
     "quantity": "1",
-    "stockStatus": "",
+    "stockStatus": "Out of stock",
     "reviews_rating": [
       {
         "reviewRatingStar": 4,
@@ -42,8 +43,9 @@ export class ProductService {
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus cum\n    dolores assumenda asperiores facilis porro reprehenderit animi culpa\n    atque blanditiis commodi perspiciatis doloremque, possimus, explicabo,\n    autem fugit beatae quae voluptas!"
   },
   {
+    "id":"a2",
     "category": "health wellness",
-    "subCategory": "Ova-cyst",
+    "subCategory": "Ova cyst",
     "label": "",
     "price": "70.00",
     "oldPrice": "90.00",
@@ -80,6 +82,7 @@ export class ProductService {
     "description": ""
   },
   {
+    "id":"a3",
     "category": "Health Wellness",
     "subCategory": "PILE OP",
     "label": "",
@@ -121,6 +124,7 @@ export class ProductService {
     "description": ""
   },
   {
+    "id":"a4",
     "category": "Health Wellness",
     "subCategory": "Gastro G",
     "label": "",
@@ -159,6 +163,7 @@ export class ProductService {
     "description": ""
   },
   {
+    "id":"a5",
     "category": "clothing",
     "subCategory": "Silk-blended kaftan",
     "label": "",
@@ -197,6 +202,7 @@ export class ProductService {
     "description": ""
   },
   {
+    "id":"a6",
     "category": "Sandles",
     "subCategory": "Spring sandlas",
     "label": "",
