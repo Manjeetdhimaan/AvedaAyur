@@ -17,6 +17,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartComponent } from './cart/cart.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductListRowComponent } from './product-listing/product-list-row/product-list-row.component';
+import { ProductListToolboxComponent } from './product-listing/product-list-toolbox/product-list-toolbox.component';
+import { FiltersComponent } from './ui-components/filters/filters.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ProductList2Component } from './product-listing/product-list2/product-list2.component';
+import { ProductList3Component } from './product-listing/product-list3/product-list3.component';
+import { ProductList4Component } from './product-listing/product-list4/product-list4.component';
 
 @Pipe({
   name: 'timeAgo',
@@ -34,7 +41,13 @@ export class TimeAgoExtendsPipe extends TimeAgoPipe {}
     ProductComponent,
     ProductDetailComponent,
     InputSpinnerComponent,
-    CartComponent
+    CartComponent,
+    ProductListRowComponent,
+    ProductListToolboxComponent,
+    FiltersComponent,
+    ProductList2Component,
+    ProductList3Component,
+    ProductList4Component
   ],
   imports: [
     BrowserModule,
@@ -43,7 +56,8 @@ export class TimeAgoExtendsPipe extends TimeAgoPipe {}
     BrowserAnimationsModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

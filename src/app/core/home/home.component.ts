@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   setClass:string ='product product-10 text-center'
   ngOnInit(): void {
   }
-  customOptions: OwlOptions = {
+  customOptionsProducts: OwlOptions = {
     loop: false,
     mouseDrag: true,
     touchDrag: true,
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
     responsive: {
       0: {
-        "items": 1
+        "items": 1,
       },
       480: {
         "items": 2
@@ -111,7 +111,7 @@ export class HomeComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
-    dots: false,
+    dots: true,
     margin: 20,
     navSpeed: 400,
     navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
@@ -141,7 +141,7 @@ export class HomeComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
-    dots: false,
+    dots: true,
     margin: 20,
     navSpeed: 400,
     navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
@@ -173,6 +173,9 @@ export class HomeComponent implements OnInit {
     pullDrag: true,
     dots: true,
     margin: 0,
+    autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
     navSpeed: 5000,
     navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
     responsive: {

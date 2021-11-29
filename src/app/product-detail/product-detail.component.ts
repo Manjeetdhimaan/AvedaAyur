@@ -15,7 +15,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     private productDetailService: ProductDetailService,
     private router: Router,
     private productService: ProductService,
-    private cartService:CartService) { }
+    private cartService: CartService) { }
 
 
   productdetail: any
@@ -26,34 +26,44 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   public userToken: any;
 
   ngOnInit(): void {
-    console.log(this.router.url.slice(1).split('-').join(' '))
-    this.productdetail = this.productDetailService.getProductDetail()
-    this.imagesrc = this.productdetail.imageSrc[0]
-    if (this.productdetail.length !== 0) {
+    if(this.productDetailService.productdetail!==null){
+      this.productdetail = this.productDetailService.getProductDetail()
+      this.imagesrc = this.productdetail.imageSrc[0]
+    }
+    this.productService.products.map((a: any) => {
+      if(this.productDetailService.productdetail!==null){
+        if(a.subCategory.toLowerCase() == this.productdetail.subCategory.toLowerCase()){
+          this.productdetail = this.productDetailService.getProductDetail()
+          this.imagesrc = this.productdetail.imageSrc[0];
+          return
+        }
+      }
+      if (a.subCategory.toLowerCase() == this.router.url.slice(1).split('-').join(' ').toLowerCase()) {
+        this.productdetail = a;
+        this.imagesrc = this.productdetail.imageSrc[0]
+        localStorage.setItem('productDetail', JSON.stringify(this.productdetail));
+        return;
+      }
+      if(this.productDetailService.productdetail==null && a.subCategory.toLowerCase() !== this.router.url.slice(1).split('-').join(' ').toLowerCase()){
+        this.router.navigate(['home']);
+      }
+      
+      
+    })
+
+    if (this.productdetail?.length !== 0) {
       this.show = true
     }
     this.getTotalReviewsAvg()
     this.getSinglePersonReview();
-    this.productService.products.map((a: any) => {
-      if (a.subCategory.toLowerCase() == this.router.url.slice(1).split('-').join(' ').toLowerCase()) {
-        if (this.productdetail.subCategory.toLowerCase() == this.router.url.slice(1).split('-').join(' ').toLowerCase()) {
-          this.productdetail = this.productDetailService.getProductDetail()
-          return;
-        }
-        else {
-          this.productdetail = a;
-          localStorage.setItem('productDetail', JSON.stringify(this.productdetail));
-          this.imagesrc = this.productdetail.imageSrc[0]
-        }
-      }
-    })
+
+
+
   }
 
-
-
   onAddItemToCart(item: any) {
-   
-     this.cartService.onaddItemToCart(item)  
+
+    this.cartService.onaddItemToCart(item)
   }
 
 
@@ -74,13 +84,13 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 
   // widthOfReviewStarRating:any =[]
   getSinglePersonReview() {
-    // this.productdetail.some(obj => this.widthOfReviewStarRating = obj.reviews_rating.map((n:any)=>{return 'width:'+(n)*100/5+'%'}));
+    // this.productdetail?.some(obj => this.widthOfReviewStarRating = obj.reviews_rating.map((n:any)=>{return 'width:'+(n)*100/5+'%'}));
     // console.log(this.widthOfReviewStarRating);
   }
 
   width = 0
   getTotalReviewsAvg() {
-    this.width += Number(this.productdetail.reviews_rating.reviewRatingStar)
+    this.width += Number(this.productdetail?.reviews_rating.reviewRatingStar)
   }
 
   labelStockStatus: any = {
@@ -106,10 +116,10 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   }
   nextProduct() {
     // this.productService.products.map((a: any, i:any) => {
-    //   // console.log(this.productdetail.subCategory)
+    //   // console.log(this.productdetail?.subCategory)
     //   // console.log(a.subCategory)
     //   // console.log()
-    //   if (this.productdetail.subCategory.toLowerCase().split('-').join('') == a.subCategory.toLowerCase().split('-').join('')) {
+    //   if (this.productdetail?.subCategory.toLowerCase().split('-').join('') == a.subCategory.toLowerCase().split('-').join('')) {
     //       let a = this.productService.products[i+1]
     //       console.log(a, "i",i)
     //       localStorage.setItem('productDetail', JSON.stringify(a))

@@ -1,5 +1,6 @@
 <header class="header header-2 header-intro-clearance">
-    <div class="header-top">
+
+    <div class="header-top" style="background-color:transparent;">
         <div class="container">
             <!-- End .header-left -->
             <div class="header-right">
@@ -81,7 +82,13 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-cart-products">
+                        <div class="text-center" *ngIf="cartArray.length<=0">
+                            <div class="container">
+                                <h3 class="page-title" style="color: red;">No items in Cart</h3>
+
+                            </div>
+                        </div>
+                        <div class="dropdown-cart-products" *ngIf="cartArray.length>0">
 
                             <!-- End .product -->
 
@@ -133,14 +140,17 @@
                         </div>
                         <!-- End .cart-product -->
 
-                        <div class="dropdown-cart-total">
+                        <div class="dropdown-cart-total" *ngIf="cartArray.length>0">
                             <span>Total</span>
 
                             <span class="cart-total-price"><span class="currency">₹</span>{{subTotal()}}</span>
                         </div>
                         <!-- End .dropdown-cart-total -->
 
-                        <div class="dropdown-cart-action">
+                        <div class="dropdown-cart-action" *ngIf="cartArray.length<=0">
+                            <a class="btn btn-primary-2" routerLink="cart">View Cart</a>
+                        </div>
+                        <div class="dropdown-cart-action" *ngIf="cartArray.length>0">
                             <a class="btn btn-primary" routerLink="cart">View Cart</a>
                             <a class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
                         </div>
@@ -197,7 +207,7 @@
                             <!-- End .megamenu -->
                         </li>
                         <li>
-                            <a class="sf-with-ul" routerLink=''>Store</a>
+                            <a class="sf-with-ul" routerLink='products-row'>Store</a>
 
                             <div class="megamenu megamenu-md">
                                 <div class="row no-gutters">
@@ -208,7 +218,7 @@
                                                     <div class="menu-title">Shop with sidebar</div>
                                                     <!-- End .menu-title -->
                                                     <ul>
-                                                        <li><a routerLink="">Shop List</a></li>
+                                                        <li><a routerLink="products-row">Shop List</a></li>
                                                         <li><a routerLink="">Shop Grid 2 Columns</a></li>
                                                         <li><a routerLink="">Shop Grid 3 Columns</a></li>
                                                         <li><a routerLink="">Shop Grid 4 Columns</a></li>

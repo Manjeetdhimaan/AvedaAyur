@@ -2,3 +2,567 @@
     border: 0.1rem solid transparent;
     width: 70%;
 }
+
+.banners.center {
+    margin-top: 0;
+}
+
+.banner {
+    background-color: transparent;
+}
+
+// .banners.center {
+//     margin-top: -15rem;
+// }
+.banners.center .row {
+    justify-content: center;
+}
+
+.banners.center .intro {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.banners.center .intro h3,
+.banners.center .intro h4,
+.banners.center .intro a {
+    text-transform: uppercase;
+}
+
+.banners.center .title {
+    margin-bottom: 1rem;
+}
+
+.banners.center .title h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.banners.center .content h4 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #fff;
+}
+
+.banners.center .action {
+    margin-top: 2rem;
+}
+
+.banners.center .action a {
+    padding: 0.75rem 2rem;
+    color: #fcb941;
+    border: 0.1rem solid #fcb941;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.banners.center .action a:hover,
+.banners.center .action a:focus {
+    color: #222;
+    background-color: #fcb941;
+}
+
+.banners.center .banner {
+    position: relative;
+    background-color: transparent;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.banner.percent .intro {
+    width: 75%;
+    background-color: #fff;
+    padding-top: 8.5rem;
+    padding-bottom: 8.5rem;
+}
+
+.banner.percent .title h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.banner.percent .title h4 {
+    font-size: 3.3rem;
+    font-weight: 700;
+    letter-spacing: -0.025rem;
+    color: #222;
+}
+
+.banner.percent .content h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #666;
+    text-transform: none;
+    line-height: 1.9em;
+}
+
+.banner.percent .img-percent {
+    width: 19rem;
+    max-width: 80%;
+    height: 7.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.banner.percent .action {
+    margin-top: 3rem;
+}
+
+.carousel-with-shadow.owl-simple .owl-nav [class*="owl-"]:focus {
+    outline: none;
+}
+
+.best-sellers .heading {
+    margin-bottom: 7rem;
+}
+
+.best-sellers .owl-simple .owl-nav .owl-prev {
+    left: 3rem;
+}
+
+.best-sellers .owl-simple .owl-nav .owl-next {
+    right: 3rem;
+}
+
+.best-sellers .carousel-with-shadow.owl-simple .owl-nav [class*="owl-"] {
+    margin-top: -87px;
+    background-color: #fff;
+    font-size: 2.4rem;
+    color: #333;
+    width: 6rem;
+    height: 6rem;
+    box-shadow: 0 5px 20px rgba(34, 34, 34, 0.2);
+}
+
+.best-sellers .owl-simple .owl-nav [class*="owl-"]:not(.disabled):hover {
+    color: #fcb941;
+    background: #fff;
+}
+
+.banner-lg,
+.banner-sm {
+    position: relative;
+}
+
+.banner-sm-div {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.banner-sm-div .intro {
+    padding-top: 0.65rem;
+    padding-bottom: 1.3rem;
+}
+
+.banners.stretch {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banners.stretch .container {
+    width: 100%;
+}
+
+.banners.stretch img {
+    max-width: none;
+}
+
+.banners.stretch .intro {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.banners.stretch .title {
+    margin-bottom: 1rem;
+}
+
+.banners.stretch .title h3 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.banners.stretch .content h4 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    line-height: 1.2em;
+}
+
+.banners.stretch .action {
+    margin-top: 1.8rem;
+    min-width: 13rem;
+}
+
+.banners.stretch .action a {
+    padding: 0.65rem 1.85rem;
+    color: #fcb941;
+    background-color: transparent;
+    border: 0.2rem solid #fcb941;
+}
+
+.banners.stretch .action a:hover,
+.banners.stretch .action a:focus {
+    color: #222;
+    background-color: #fcb941;
+}
+
+.banner-sm {
+    padding: 0;
+}
+
+.banners.stretch .banner-lg {
+    padding: 0;
+}
+
+.banners.stretch .banner-lg .intro {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banners.stretch .banner-lg .title {
+    margin-bottom: 0.5rem;
+}
+
+.banners.stretch .banner-lg .title h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Playfair Display";
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.banners.stretch .banner-lg .content h4 {
+    font-size: 5rem;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+}
+
+.banners.stretch .banner-lg p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #e7e6ea;
+}
+
+.banners.stretch .banner-lg .action {
+    margin-top: 4rem;
+}
+
+.banners.stretch .banner-lg .action a {
+    padding: 1.1rem 2rem;
+}
+
+.banner-sm.font-black .intro {
+    left: 3rem;
+}
+
+.banner-sm.font-black .title h3 {
+    color: #777;
+}
+
+.banner-sm.font-black .content h4 {
+    color: #222;
+}
+
+.banner-sm.font-white .intro {
+    right: 3rem;
+}
+
+.product {
+    overflow: hidden;
+}
+
+.featured-products {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #f8f8f8;
+}
+
+.featured-products .row {
+    justify-content: center;
+}
+
+.featured-products .heading {
+    margin-top: 0;
+}
+
+.featured-products [class*="col-"] {
+    background-color: #f8f8f8;
+    margin-bottom: 1rem;
+}
+
+.featured-products .row>div:last-child {
+    margin-bottom: 3rem;
+}
+
+.featured-products .product.product-10 {
+    padding-top: 2rem;
+}
+
+.featured-products .product.product-10 .product-body {
+    padding-bottom: 3rem;
+}
+
+.featured-products .product.product-10:hover product-action,
+.featured-products .product.product-10:focus product-action {
+    transform: translateY(35%);
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products .product-media {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.products .product.product-10 .product-image-hover {
+    padding: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.products img {
+    max-width: 220px;
+}
+
+.products [class*="col-"] {
+    padding-left: 0;
+}
+
+.products [class*="col-"]:nth-child(2n) {
+    padding-right: 0;
+    padding-left: 1rem;
+}
+
+.product.product-10.product-lg {
+    height: 100%;
+}
+
+.product.product-10.product-lg .product-media {
+    padding: 0;
+}
+
+.product.product-10.product-lg .product-action {
+    opacity: 1;
+    visibility: visible;
+    padding-bottom: 5rem;
+}
+
+.product.product-10.product-lg .product-body {
+    padding-bottom: 2rem;
+}
+
+.product.product-10.product-lg:hover .product-body,
+.product.product-10.product-lg:focus .product-body {
+    transform: translateY(0);
+}
+
+.product.product-10.product-lg:hover .product-action,
+.product.product-10.product-lg:focus .product-action {
+    transform: translateY(100%);
+}
+
+.blog {
+    margin-top: 6.5rem;
+}
+
+.entry-meta {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    margin-bottom: 0.3rem;
+}
+
+.entry-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.2rem;
+}
+
+.entry-title a:hover,
+.entry-title a:focus {
+    color: #fcb941;
+}
+
+.read-more {
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.read-more::after {
+    content: "";
+}
+
+.read-more:hover,
+.read-more:focus {
+    padding-right: 0;
+    color: #fcb941;
+}
+
+span.highlight {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #222;
+}
+
+.instagram .heading {
+    margin-bottom: 3.5rem;
+}
+
+.instagram .container {
+    padding-top: 2rem;
+    position: relative;
+}
+
+.instagram .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    right: 1rem;
+    background-color: #ebebeb;
+    height: 0.1rem;
+}
+
+.instagram .instagram-feed {
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.instagram .instagram-feed::after {
+    left: 1rem;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.instagram .instagram-feed-content a:hover,
+.instagram .instagram-feed-content a:focus {
+    color: #fcb941;
+}
+
+.instagram img {
+    width: 100%;
+}
+
+.service {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.icon-box-side {
+    margin-left: -2rem;
+}
+
+.icon-box-side .icon-box-icon {
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: -0.025em;
+}
+
+.icon-box-side .icon-box-title {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+.icon-box-content p:last-child {
+    font-size: 1.3rem;
+    letter-spacing: 0.01em;
+}
+
+@media screen and (min-width: 1200px) {
+    .banners.center .row {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+    }
+    .banners.center .banner {
+        flex: 0 0 31.3%;
+        max-width: 31.3%;
+    }
+    .banners.center .banner.percent {
+        flex: 0 0 37.4%;
+        max-width: 37.4%;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .banners.center .banner {
+        align-items: inherit;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .banner-lg,
+    .banner-sm {
+        display: flex;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+    .banner-sm.font-white .intro,
+    .banner-sm.font-black .intro {
+        left: 50%;
+        top: 50%;
+        right: initial;
+        transform: translate(-50%, -50%);
+    }
+    .widget-about p {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .deal {
+        margin-bottom: 2rem;
+    }
+    .product.product-10.product-lg .product-action {
+        margin-top: 2rem;
+        position: relative;
+        transform: translateY(0);
+    }
+    .product.product-10.product-lg:hover .product-action,
+    .product.product-10.product-lg:focus .product-action {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 369px) {
+    .product.product-10:not(.product-lg) .btn-cart {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+/*# sourceMappingURL=demo-24.css.map */

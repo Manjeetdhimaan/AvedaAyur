@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Avedaayur';
   true = false
+  close(){
+    console.log('ad')
+  }
 }

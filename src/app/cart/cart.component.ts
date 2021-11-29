@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ProductDetailService } from '../product-detail/product-detail.service';
 import { CartService } from './cart.service';
 
 @Component({
@@ -11,6 +13,8 @@ export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService,
     private formBuilder: FormBuilder,
+    private productDetailService: ProductDetailService,
+    private router: Router
     // private productListService: ProductListingService
     ) {
      
@@ -41,9 +45,7 @@ ngOnChanges(){
       shippingCost: [this.freeShipping, [Validators.required]]
     });
     this.cartService.getCartProductFromFirebase();
-      this.data = localStorage.getItem('cart')
-     this.Json = JSON.parse(this.data);
-     this.cartList = this.Json;
+     this.cartList =  this.cartService.getCartItem();
   }
 
   getTotal() {
@@ -68,6 +70,14 @@ ngOnChanges(){
 
   onUpdate() {
     this.cartList = this.cartService.getCartItem()
+  }
+  onAddToProductDetail(item: any) {
+    this.productDetailService.getProductDetailtem(item);
+    
+  }
+
+  goToProductDetailComponent(item:any) {
+    this.router.navigate(['', item.subCategory.split(' ').join('-')]);
   }
 
 }

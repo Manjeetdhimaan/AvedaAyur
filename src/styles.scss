@@ -1531,7 +1531,7 @@ blockquote.text-white cite span {
 .header-intro-clearance .header-bottom .container::after {
     position: absolute;
     content: '';
-    right: 28rem;
+    right: 19rem;
     height: 1.5rem;
     width: .1rem;
     top: 50%;
@@ -19445,4 +19445,8 @@ a:hover {
     font-family: monospace;
     font-size: 95%;
     margin-right: .50%;
+}
+
+.input-group {
+    border-bottom: 0 transparent;
 }

@@ -15,7 +15,7 @@
     </nav>
     <div class="page-content">
         <div class="cart">
-            <div class="container">
+            <div class="container" *ngIf="cartList.length>0">
                 <div class="row">
                     <div class="col-lg-9">
                         <table class="table table-cart table-mobile">
@@ -31,7 +31,7 @@
 
                             <tbody>
 
-                                <tr *ngFor="let data of cartList   ;let i=index;">
+                                <tr *ngFor="let data of cartList; let i=index;">
                                     <td class="product-col">
                                         <div class="product">
                                             <figure class="product-media">
@@ -41,7 +41,7 @@
                                             </figure>
 
                                             <h3 class="product-title">
-                                                <a>{{ data.subCategory}}</a>
+                                                <a (click)="onAddToProductDetail(data)" (click)="goToProductDetailComponent(data)">{{ data.subCategory}}</a>
                                             </h3>
                                         </div>
                                     </td>
@@ -151,6 +151,16 @@
                     </aside>
                 </div>
             </div>
+            <div class="text-center" *ngIf="cartList.length<=0">
+                <div class="container">
+                    <h1 class="page-title" style="color: red;">No items in Cart</h1>
+                    <a routerLink="" class="btn btn-outline-primary-2 btn-order btn-block"><span>CONTINUE
+                        SHOPPING</span><i class="icon-refresh"></i></a>
+                </div>
+
+            </div>
         </div>
     </div>
+
+
 </main>
