@@ -45,10 +45,12 @@ export class CartService {
      if (this.cartList.some((obj:any) => obj.id === product.id)) {
       this.cartList.push();
     }
-     if (this.cartList.some((obj:any) => obj.quantity != product.quantity)) {
-      this.cartList.indexOf(product) !== -1 && this.cartList.splice(this.cartList.indexOf(product), 1)
-      this.cartList.push(product);
-    }
+    //  if (this.cartList.some((obj:any) => obj.quantity != product.quantity)) {
+    //   console.log(this.cartList);
+    //   this.cartList = this.cartList.splice(this.cartList.indexOf(product), 1)
+    //   console.log(this.cartList);
+    //   this.cartList.push(product);
+    // }
     else {
     this.cartList.push(product);
     }

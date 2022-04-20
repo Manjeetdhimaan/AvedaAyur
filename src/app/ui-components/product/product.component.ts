@@ -95,6 +95,7 @@ export class ProductComponent implements OnInit {
   }
 
   goToProductDetailComponent() {
+    window.scrollTo(0, 0);
     this.router.navigate(['', this.data.subCategory.split(' ').join('-')]);
   }
 
